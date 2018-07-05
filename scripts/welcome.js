@@ -70,7 +70,7 @@ module.exports = (robot) => {
 
 
         // Send the public welcome to #intros
-        driver.sendToRoomId(publicGreeting, process.env.ROCKETCHAT_INTROID);
+        setTimeout(() => driver.sendToRoomId(publicGreeting, process.env.ROCKETCHAT_INTROID), 10000);
 
 
         // Send a private DM with more info
@@ -88,6 +88,6 @@ module.exports = (robot) => {
             }
 
             setTimeout(() => typing(dmRoom, false), timeout + 100);
-        }, 5000);
+        }, 45000);
     });
 }
