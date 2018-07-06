@@ -7,7 +7,7 @@ module.exports = (robot) => {
             const text = isDm ? res.message.text.substr(res.message.text.indexOf(' ')+1) : res.message.text;
 
 
-            if (!(isDm || /john/i.test(text) || new RegExp(`/@${process.env.ROCKETCHAT_USER}/`).test(text) )) return;
+            if (!(isDm || /john/i.test(text) || new RegExp(`/@${process.env.ROCKETCHAT_USER}/`).test(text) || room === process.env.ROCKETCHAT_QANDAID)) return;
 
             const socket = res.robot.adapter.driver.asteroid.ddp._socket;
             const typing = (on) => {
