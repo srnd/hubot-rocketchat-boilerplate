@@ -63,9 +63,16 @@ module.exports = (robot) => {
         const publicGreeting = `${greeting} @${user}, welcome to our community! ${cta} Here's a question to get you started: ${question}`;
         const privateGreetings = [
             `Hey there, thanks for joining us!`,
-            `I'm John, and I'm SRND's official, 100% not-a-robot, authentic human. (If you message me you will get a genuine and useful reply that is definitely not from the Cleverbot API.)`,
-            `You're welcome to poke around anywhere in the chat system. Most of our chat happens in #general, but here are a few other rooms which you might find interesting:\n\n- #music (share songs you like)\n- #hacking (learn about cyber security by example)\n- #nice (recognize other community members who did something nice/helpful)\n- #waywo ("what are you working on")\n- #helpdesk (free live coding help!)\n- #multiplayer (video games!)\n- #random (everything else)`,
-            `Our community tries to be as friendly and welcoming as possible, but if you have any problems (or other questions) just DM @tylermenezes.`,
+            `I'm John, and I'm SRND's official, 100% not-a-robot, authentic human. (If you message me you will get a genuine and semi-useful reply that is definitely not from the Cleverbot API.)`,
+            `You're welcome to poke around anywhere in the chat system. Most of our chat happens in #general, but here are a few other rooms which you might find interesting:',
+            `#music (share songs you like)`,
+            `#hacking (learn about cyber security by example)`,
+            `#nice (recognize other community members who did something nice or helpful)`,
+            `#waywo ("what are you working on")`,
+            `#helpdesk (free live tech help!)`,
+            `#multiplayer (video games!)`,
+            `#random (everything else)`,
+            `Our community tries to be as friendly and welcoming as possible, but if you have any problems (or other questions) just DM @tylermenezes.`
         ];
 
 
