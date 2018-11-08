@@ -26,7 +26,7 @@ module.exports = (robot) => {
             const cleverbot = (input, respond) => {
                 const key = process.env.CLEVERBOT_KEY;
                 const state = cs[room] || '';
-                res.robot.http(`http://www.cleverbot.com/getreply?key=${key}&input=${input}&cs=${state}`)
+                res.robot.http(`https://www.cleverbot.com/getreply?key=${key}&input=${input}&cs=${state}`)
                     .get()((err, resp, body) => {
                         body = JSON.parse(body);
                         cs[room] = body.cs;
@@ -37,7 +37,7 @@ module.exports = (robot) => {
             typing(true);
             const timeout = setTimeout(() => typing(false), 10000);
             cleverbot(text, (response) => {
-                res.robot.adapter.driver.sendToRoomId(response, room);
+                res.robot.adapter.driver.sendToRoomId(response, room === 'general' ? 'GENERAL' : room);
                 typing(false);
                 clearTimeout(timeout);
             });
